@@ -1,0 +1,9 @@
+Feb 10, 2017 5:09:42 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.lang.NullPointerException
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:40)
+	at fr.epita.iam.services.IdentityJDBCDAO.<init>(IdentityJDBCDAO.java:29)
+	at fr.epita.iam.business.DeleteActivity.execute(DeleteActivity.java:16)
+	at fr.epita.iam.launcher.ConsoleLauncher.handleDelete(ConsoleLauncher.java:122)
+	at fr.epita.iam.launcher.ConsoleLauncher.main(ConsoleLauncher.java:59)
+

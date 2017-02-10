@@ -1,0 +1,60 @@
+Feb 10, 2017 7:17:23 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.lang.NullPointerException
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:41)
+	at fr.epita.iam.services.IdentityJDBCDAO.<init>(IdentityJDBCDAO.java:30)
+	at fr.epita.iam.business.DeleteActivity.execute(DeleteActivity.java:25)
+	at fr.epita.iam.launcher.ConsoleLauncher.handleDelete(ConsoleLauncher.java:142)
+	at fr.epita.iam.launcher.ConsoleLauncher.main(ConsoleLauncher.java:64)
+
+Feb 10, 2017 7:17:27 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.sql.SQLNonTransientConnectionException: No current connection.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getCurrentSchemaName(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getSchema(Unknown Source)
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:41)
+	at fr.epita.iam.services.IdentityJDBCDAO.readIdentity(IdentityJDBCDAO.java:180)
+	at fr.epita.iam.business.DeleteActivity.execute(DeleteActivity.java:35)
+	at fr.epita.iam.launcher.ConsoleLauncher.handleDelete(ConsoleLauncher.java:142)
+	at fr.epita.iam.launcher.ConsoleLauncher.main(ConsoleLauncher.java:64)
+Caused by: ERROR 08003: No current connection.
+	at org.apache.derby.client.am.ClientConnection.checkForClosedConnection(Unknown Source)
+	... 7 more
+
+Feb 10, 2017 7:17:29 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.sql.SQLNonTransientConnectionException: No current connection.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getCurrentSchemaName(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getSchema(Unknown Source)
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:41)
+	at fr.epita.iam.services.IdentityJDBCDAO.deleteIdentity(IdentityJDBCDAO.java:256)
+	at fr.epita.iam.business.DeleteActivity.execute(DeleteActivity.java:50)
+	at fr.epita.iam.launcher.ConsoleLauncher.handleDelete(ConsoleLauncher.java:142)
+	at fr.epita.iam.launcher.ConsoleLauncher.main(ConsoleLauncher.java:64)
+Caused by: ERROR 08003: No current connection.
+	at org.apache.derby.client.am.ClientConnection.checkForClosedConnection(Unknown Source)
+	... 7 more
+
+Feb 10, 2017 7:17:32 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.lang.NullPointerException
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:41)
+	at fr.epita.iam.services.IdentityJDBCDAO.<init>(IdentityJDBCDAO.java:30)
+	at fr.epita.iam.business.ModifyActivity.execute(ModifyActivity.java:26)
+	at fr.epita.iam.launcher.ConsoleLauncher.handleUpdate(ConsoleLauncher.java:132)
+	at fr.epita.iam.launcher.ConsoleLauncher.main(ConsoleLauncher.java:59)
+
+Feb 10, 2017 7:17:32 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.lang.NullPointerException
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:41)
+	at fr.epita.iam.services.IdentityJDBCDAO.<init>(IdentityJDBCDAO.java:30)
+	at fr.epita.iam.business.ShowAllActivity.execute(ShowAllActivity.java:20)
+	at fr.epita.iam.business.ModifyActivity.execute(ModifyActivity.java:30)
+	at fr.epita.iam.launcher.ConsoleLauncher.handleUpdate(ConsoleLauncher.java:132)
+	at fr.epita.iam.launcher.ConsoleLauncher.main(ConsoleLauncher.java:59)
+

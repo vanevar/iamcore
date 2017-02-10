@@ -1,0 +1,47 @@
+Feb 10, 2017 7:47:30 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.sql.SQLNonTransientConnectionException: No current connection.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getCurrentSchemaName(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getSchema(Unknown Source)
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:46)
+	at fr.epita.iam.services.IdentityJDBCDAO.readAllIdentities(IdentityJDBCDAO.java:110)
+	at fr.epita.iam.services.IdentityJDBCDAO.alreadyExists(IdentityJDBCDAO.java:291)
+	at fr.epita.iam.services.IdentityJDBCDAO.writeIdentity(IdentityJDBCDAO.java:148)
+	at fr.epita.iam.tests.CreateIdentities.create(CreateIdentities.java:49)
+	at fr.epita.iam.tests.CreateIdentities.main(CreateIdentities.java:36)
+Caused by: ERROR 08003: No current connection.
+	at org.apache.derby.client.am.ClientConnection.checkForClosedConnection(Unknown Source)
+	... 8 more
+
+Feb 10, 2017 7:47:30 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.sql.SQLNonTransientConnectionException: No current connection.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getCurrentSchemaName(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getSchema(Unknown Source)
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:46)
+	at fr.epita.iam.services.IdentityJDBCDAO.writeIdentity(IdentityJDBCDAO.java:153)
+	at fr.epita.iam.tests.CreateIdentities.create(CreateIdentities.java:49)
+	at fr.epita.iam.tests.CreateIdentities.main(CreateIdentities.java:36)
+Caused by: ERROR 08003: No current connection.
+	at org.apache.derby.client.am.ClientConnection.checkForClosedConnection(Unknown Source)
+	... 6 more
+
+Feb 10, 2017 7:47:30 PM fr.epita.iam.services.IdentityJDBCDAO getConnection
+INFO: Connection lost. Re-connecting.
+java.sql.SQLNonTransientConnectionException: No current connection.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getCurrentSchemaName(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.getSchema(Unknown Source)
+	at fr.epita.iam.services.IdentityJDBCDAO.getConnection(IdentityJDBCDAO.java:46)
+	at fr.epita.iam.services.IdentityJDBCDAO.readAllIdentities(IdentityJDBCDAO.java:110)
+	at fr.epita.iam.tests.CreateIdentities.create(CreateIdentities.java:51)
+	at fr.epita.iam.tests.CreateIdentities.main(CreateIdentities.java:36)
+Caused by: ERROR 08003: No current connection.
+	at org.apache.derby.client.am.ClientConnection.checkForClosedConnection(Unknown Source)
+	... 6 more
+
