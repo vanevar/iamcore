@@ -1,5 +1,6 @@
 package fr.epita.iam.business;
 
+import java.util.List;
 import java.util.Scanner;
 
 import fr.epita.iam.datamodel.Identity;
@@ -26,8 +27,18 @@ public class ModifyActivity {
     IdentityJDBCDAO idJDBC = new IdentityJDBCDAO();
     DateFormatManager dfm = new DateFormatManager();
     
+    List<Identity> identities = idJDBC.readAllIdentities();
+    if(identities.isEmpty())
+    {
+      UserMessageHandler.writeMessage("There are no identities on the Database. Aborting update Process!");
+      return;
+    }
+    
     UserMessageHandler.writeMessage("Identity Update");
-    ShowAllActivity.execute();
+    for(Identity id : identities)
+    {
+      UserMessageHandler.writeMessage(id.toString());
+    }
     
     UserMessageHandler.writeMessage("Please insert the UId of the identity to modify:");
     String uId = scanner.nextLine();

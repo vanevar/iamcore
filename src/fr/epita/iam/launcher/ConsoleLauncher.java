@@ -40,7 +40,8 @@ public class ConsoleLauncher {
     do
     {
       //Menu
-      UserMessageHandler.writeMessage("PLease selet and action:");    
+      UserMessageHandler.writeMessage("------------------------");
+      UserMessageHandler.writeMessage("Please selet and action:");    
       UserMessageHandler.writeMessage("1. Create an identity");    
       UserMessageHandler.writeMessage("2. Modify an identity");    
       UserMessageHandler.writeMessage("3. Delete an identity");    

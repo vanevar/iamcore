@@ -1,5 +1,6 @@
 package fr.epita.iam.business;
 
+import java.util.List;
 import java.util.Scanner;
 
 import fr.epita.iam.datamodel.Identity;
@@ -23,10 +24,15 @@ public class DeleteActivity {
    */
   public static void execute(Scanner scanner) {
     IdentityJDBCDAO idJDBC = new IdentityJDBCDAO();
-      
+    List<Identity> identities = idJDBC.readAllIdentities();
+    if(identities.isEmpty())
+    {
+      UserMessageHandler.writeMessage("There are no identities on the Database. Aborting delete Process!");
+      return;
+    }
     UserMessageHandler.writeMessage("Identity Deletetion");
     UserMessageHandler.writeMessage("Available identities");
-    for(Identity i : idJDBC.readAllIdentities()){
+    for(Identity i : identities){
       UserMessageHandler.writeMessage(i.toString());
     }
     UserMessageHandler.writeMessage("Please insert the UId of the identity to remove:");
