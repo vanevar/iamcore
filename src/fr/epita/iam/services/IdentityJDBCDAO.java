@@ -49,7 +49,7 @@ public class IdentityJDBCDAO {
       MyLogger.setup();
       LOGGER.log(Level.INFO, "Connection lost. Re-connecting.", e);
       List<String> configs = readFromFile();
-      String connString = "jdbc:derby://"+configs.get(0)+"/IAM;create=true";
+      String connString = configs.get(0);
       this.conn =  DriverManager.getConnection(connString, configs.get(1), configs.get(2));
     }
     return this.conn;

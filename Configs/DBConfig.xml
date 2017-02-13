@@ -1,6 +1,6 @@
 <Config>
 <host>
-localhost:1527
+jdbc:derby://localhost:1527/IAM;create=true
 </host>
 <user>
 admin

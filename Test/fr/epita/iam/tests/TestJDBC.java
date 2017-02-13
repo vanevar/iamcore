@@ -18,10 +18,7 @@ public class TestJDBC {
     UserMessageHandler.writeMessage("Read All identities: "+testReadAllIdentities());
     UserMessageHandler.writeMessage("Read identity:" + testReadIdentity());
     UserMessageHandler.writeMessage("Write Identity: " + testWriteIdentity());
-    UserMessageHandler.writeMessage("Update Identity: " + testUpdateIdentity());
-    UserMessageHandler.writeMessage("Duplicate Identity: " + testDuplicateInsertion());
-    
-    
+    UserMessageHandler.writeMessage("Update Identity: " + testUpdateIdentity());    
   }
 
   private static Boolean testReadAllIdentities(){
@@ -79,22 +76,4 @@ public class TestJDBC {
     return false;
   }
   
-  private static Boolean testDuplicateInsertion(){
-    DateFormatManager dfm = new DateFormatManager();
-    Identity id = new Identity("Carlos Diez", "2", "cdm@gmailcom", dfm.dateFromString("1980-12-24"));
-    IdentityJDBCDAO idJDBC = new IdentityJDBCDAO();
-    idJDBC.writeIdentity(id);
-    idJDBC.writeIdentity(id);
-    
-    int count = 0;
-    for(Identity i : idJDBC.readAllIdentities()){
-      if( id.getDisplayName().equals(i.getDisplayName()) &&
-          id.getEmail().equals(i.getEmail()) &&
-          id.getBirthdate().equals(i.getBirthdate()) )
-      {
-        count++;
-      }
-    }
-    return count==1;
-  }
 }
